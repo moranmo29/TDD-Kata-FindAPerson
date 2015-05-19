@@ -14,6 +14,13 @@ class Crowdmap(object):
                 return True
         return False
 
+	def is_location_for_name(self, name):
+		name_posts = self.get_all_posts_for(name)
+		for post in name_posts:
+			if location_service.find(post):
+				return True
+		return False
+		
 class LocationService:
     def find(self, text):
-        return (text.find("Banqkok") != -1)
+        return (text.find("Bangkok") != -1)
