@@ -15,11 +15,13 @@ class FindProjTests(unittest.TestCase):
 
 	def test_return_boolean_if_location_in_the_post(self):
 		location_exist = self.crowdmap.is_location_for_name("Or")
-		self.assertTrue(location_exist)
-			
+		self.assertTrue(location_exist) 
 		
-		
-		
+	def test_check_different_location(self):
+		different_location = self.crowdmap.is_different_location_for_name("Or")
+		self.assertTrue(different_location)
+	
+				
 if __name__ == '__main__':
 	unittest.main()
 
